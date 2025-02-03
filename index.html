@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // JavaScript code for testing hoisting
+      function hoisting() {
+        console.log(a); // Will log: undefined (hoisting applies to declarations, not initializations)
+        var a = 10;     // Declaration is hoisted but assignment happens here
+        console.log(a); // Will log: 10
+      }
+  
+      // Call the function to test hoisting
+      hoisting();
+      
+    </script>
+    <script>
+
+      const person = {
+        nom: "John",
+        prenom: "Doe",
+          afficherEmail: function() {
+            console.log(`Mon nom est ${this.nom} ${this.prenom}`);
+          }
+      };
+
+      const objet = Object.create(person);
+
+      objet.nom = "Jane";
+      objet.prenom = "Doeeee";
+
+      objet.afficherEmail();   
+    </script>
+  </body>
+</html>
