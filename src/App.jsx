@@ -1,19 +1,24 @@
 import React from 'react';
 import Counter from './components/Counter';
-import ListManager from './components/ListManager';
-import ColorBox from './components/ColorBox';
-import NoteManager from './components/NoteManager';
-import TodoList from './components/TodoList';
-
+import Example from './components/exemple.jsx';
+import Example1 from './components/Exemple1.jsx';
+import Example2 from './components/Exemple2.jsx';
+import ListManager from './components/ListManager.jsx';
+import ColorBox from './components/ColorBox.jsx';
+import NoteManager from './components/NoteManager.jsx';
+import ToDoList from './components/TodoList.jsx';
 function App() {
   return (
     <div>
       <h1>Mes Exercices React</h1>
-      <Counter initialCount={10} step={2} />
-      <ListManager initialItems={['React', 'Angular', 'VueJs']} placeholder="Ajouter une technologie" />
+      <Counter /> 
+      <Example />
+      <Example1 />
+      <Example2 />
+      <ListManager />
       <ColorBox initialColor="#ff5733" colorOptions={["#ff5733", "#33ff57", "#3357ff"]} />
-      <NoteManager initialNotes={[12, 15, 18]} />
-      <TodoList initialTasks={[{ name: "Réviser React", priority: "Haute", completed: false }]} />
+      <NoteManager />
+      <ToDoList />
     </div>
   );
 }
