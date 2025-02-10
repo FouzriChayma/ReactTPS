@@ -17,6 +17,11 @@ const NoteManager = ({ initialNotes = [] }) => {
   const removeNote = (index) => {
     setNotes(notes.filter((_, i) => i !== index));
   };
+  //supp tnjm taaml :
+  
+  /*const updatedNotes = [...notes]; // Create a copy of the notes array
+    updatedNotes.splice(index, 1); // Removes 1 item at the specified index
+    setNotes(updatedNotes); */
 
   const average = notes.length ? (notes.reduce((acc, n) => acc + n, 0) / notes.length).toFixed(2) : 0;
 
